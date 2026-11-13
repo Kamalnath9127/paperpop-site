@@ -3,30 +3,526 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PaperPop</title>
-<meta name="description" content="Paper sticky notes for your Windows desktop. Everything stays on your computer.">
-<link rel="icon" href="paperpop.png">
-<link rel="stylesheet" href="style.css">
+<title>PaperPop — Cute Sticky Notes for Windows Desktop (Free)</title>
+<meta name="description" content="PaperPop puts aesthetic paper sticky notes on your Windows 10 and 11 desktop. Always on top, handwriting font, pen ticks and confetti. Free, offline, no account.">
+<link rel="canonical" href="https://kamalnath9127.github.io/paperpop-site/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Kamalnath K">
+<meta name="theme-color" content="#F5F1EA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PaperPop">
+<meta property="og:title" content="PaperPop — Sticky notes that float above everything">
+<meta property="og:description" content="PaperPop puts aesthetic paper sticky notes on your Windows 10 and 11 desktop. Always on top, handwriting font, pen ticks and confetti. Free, offline, no account.">
+<meta property="og:url" content="https://kamalnath9127.github.io/paperpop-site/">
+<meta property="og:image" content="https://kamalnath9127.github.io/paperpop-site/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PaperPop sticky notes on a Windows desktop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PaperPop — Sticky notes that float above everything">
+<meta name="twitter:description" content="PaperPop puts aesthetic paper sticky notes on your Windows 10 and 11 desktop. Always on top, handwriting font, pen ticks and confetti. Free, offline, no account.">
+<meta name="twitter:image" content="https://kamalnath9127.github.io/paperpop-site/assets/og-image.png">
+<meta name="msApplication-PackageFamilyName" content="KamalnathK.PaperPopStickyNotes_70f9eccshp4mt">
+<meta name="msApplication-ID" content="9MVPWKV3PTC3">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Caveat:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "PaperPop Sticky Notes", "alternateName": "PaperPop", "url": "https://kamalnath9127.github.io/paperpop-site/", "image": "https://kamalnath9127.github.io/paperpop-site/assets/og-image.png", "description": "PaperPop puts aesthetic paper sticky notes on your Windows 10 and 11 desktop. Always on top, handwriting font, pen ticks and confetti. Free, offline, no account.", "applicationCategory": "ProductivityApplication", "operatingSystem": "Windows 10, Windows 11", "downloadUrl": "https://apps.microsoft.com/detail/9MVPWKV3PTC3", "installUrl": "https://apps.microsoft.com/detail/9MVPWKV3PTC3", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Kamalnath K"}, "publisher": {"@type": "Person", "name": "Kamalnath K"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is PaperPop free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. PaperPop is free to download and use."}}, {"@type": "Question", "name": "Does it need the internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. PaperPop works fully offline."}}, {"@type": "Question", "name": "Where are my notes saved?", "acceptedAnswer": {"@type": "Answer", "text": "Only on your computer, in a local database with automatic backups. Export a .paperpop file any time and import it on another PC."}}, {"@type": "Question", "name": "Microsoft Store or .exe?", "acceptedAnswer": {"@type": "Answer", "text": "The Store version is recommended: it installs without warnings and updates itself. The .exe is a direct install for people who prefer it. Install one, not both."}}, {"@type": "Question", "name": "Can it start with Windows?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Turn on Start with Windows in Settings and your notes are waiting every time you log in."}}, {"@type": "Question", "name": "How is PaperPop different from Windows Sticky Notes?", "acceptedAnswer": {"@type": "Answer", "text": "PaperPop is built to keep your checklist in sight: notes stay on top of other apps, use a handwriting font, and celebrate finished tasks with pen ticks and confetti. It works fully offline without any account."}}, {"@type": "Question", "name": "Does PaperPop work on Windows 10?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. PaperPop runs on both Windows 10 and Windows 11."}}]}, {"@context": "https://schema.org", "@type": "WebSite", "name": "PaperPop", "url": "https://kamalnath9127.github.io/paperpop-site/"}]</script>
+<style>
+body{margin:0;background:#F5F1EA}
+a{color:inherit}a:hover{color:inherit}
+.pp{--paper:#F5F1EA;--card:#FFFCF6;--ink:#161412;--ink2:#56504A;--night:#0E0E10;--tom:#E5532D;--yel:#FFD95A;--pink:#FFC2CF;--mint:#BDEBCB;--sky:#C4DDFB;--hair:rgba(22,20,18,.14);font-family:Geist,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.pp *{box-sizing:border-box}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.mono{font-family:'Geist Mono',ui-monospace,monospace}
+.hand{font-family:Caveat,cursive}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:80;transition:background .4s,border-color .4s}
+.nav .in{max-width:1240px;margin:0 auto;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.navbg{position:absolute;inset:0;background:rgba(245,241,234,.72);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--hair);z-index:-1}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Caveat,cursive;font-weight:700;font-size:30px;color:var(--ink)}
+.links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
+.links a.l{text-decoration:none;color:var(--ink2)}
+.links a.l:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.b-ink{background:var(--ink);color:var(--paper)}
+.b-ink:hover{color:#fff;background:#000}
+.b-line{border:1px solid rgba(22,20,18,.28);color:var(--ink)}
+.b-line:hover{border-color:var(--ink)}
+.b-tom{background:var(--tom);color:#fff}
+.b-tom:hover{color:#fff;background:#d4441f}
+.b-cream{background:var(--paper);color:var(--ink)}
+.b-cream:hover{color:var(--ink);background:#fff}
+.b-ghostd{border:1px solid rgba(245,241,234,.35);color:var(--paper)}
+.b-ghostd:hover{color:#fff;border-color:var(--paper)}
+
+/* film */
+.film{position:relative;height:100vh;min-height:620px;overflow:hidden;background:var(--paper)}
+.hero2{padding:56px 0 10px;text-align:center}
+.htx2{display:flex;flex-direction:column;align-items:center}
+.hero2 .h1{font-size:clamp(46px,6.4vw,104px)}
+.hpts{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:16px 48px;margin:30px 0 0}
+.hpts div{display:flex;flex-direction:column;gap:4px;text-align:center}
+.hpts b{font-size:15px;font-weight:600}
+.hpts span{font-size:14px;color:var(--ink2)}
+.hero2 .hcta{margin-top:34px}
+.pillnav{display:flex;gap:2px;padding:5px;border:1px solid var(--hair);border-radius:999px;background:rgba(255,252,246,.8)}
+.pillnav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2);padding:9px 18px;border-radius:999px;transition:background .25s,color .25s}
+.pillnav a:hover{background:var(--ink);color:var(--paper)}
+.dlpill{min-height:44px;padding:0 20px;font-size:14px}
+.mon{position:relative;background:#0F0F10;border-radius:20px;padding:1.25%;box-shadow:0 0 0 1px #2B2B2E,inset 0 0 0 1px #3A3A3E,0 60px 90px -45px rgba(40,30,15,.55)}
+.mon::after{content:"";position:absolute;top:.45%;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#26262A}
+.neck{position:relative;width:14%;height:clamp(40px,min(8vw,10vh),112px);margin:0 auto;background:linear-gradient(90deg,#A9ADB2,#E6E8EB 38%,#D3D6DA 62%,#9EA2A8);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.mfoot{position:relative;width:32%;height:clamp(8px,1.1vw,14px);margin:0 auto;border-radius:8px 8px 3px 3px;background:linear-gradient(#F0F2F4,#B4B8BD)}
+.grass{position:absolute;left:-16%;width:132%;height:auto;bottom:-3%;pointer-events:none;z-index:2;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 70%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+@media (max-width:700px){.hpts{grid-template-columns:minmax(0,1fr);gap:12px}.pillnav{display:none}}
+.htx{position:absolute;left:0;right:0;top:10vh;text-align:center;padding:0 20px;z-index:2}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--ink2);padding:7px 14px 7px 8px;border:1px solid var(--hair);border-radius:999px;background:rgba(255,252,246,.7)}
+.kick b{display:inline-grid;place-items:center;height:22px;padding:0 8px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:500;font-size:11px;letter-spacing:.04em}
+.h1{font-size:clamp(54px,8.2vw,128px);line-height:.9;margin:22px 0 0;letter-spacing:-.025em}
+.h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.h1 .ln > span{display:inline-block}
+.h1 em{font-style:italic;color:var(--tom);position:relative}
+.h1 em svg{position:absolute;left:-2%;bottom:-.02em;width:104%;height:.22em;overflow:visible}
+.hsub{max-width:520px;margin:22px auto 0;font-size:17px;line-height:1.55;color:var(--ink2)}
+.hcta{display:flex;justify-content:center;gap:12px;margin-top:26px;flex-wrap:wrap}
+.scrollhint{position:absolute;left:50%;bottom:22px;z-index:3;margin-left:-60px;width:120px;text-align:center;font-size:12px;color:var(--ink2);z-index:2}
+.rig{position:absolute;left:50%;top:0;width:min(1080px,88vw,calc((100vh - 170px) * 1.32));z-index:1;will-change:transform}
+.mimg{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%);mask-composite:intersect}
+.lid{position:relative;background:#0A0A0B;border-radius:2.1% 2.1% .9% .9% / 3.4% 3.4% 1.4% 1.4%;padding:2.2% 2.2% 3.4%;box-shadow:0 0 0 1.5px #BFC3C8,0 0 0 2.5px #7D8187,0 60px 110px -40px rgba(20,14,8,.6),0 30px 50px -30px rgba(20,14,8,.4)}
+.cam{position:absolute;top:1%;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:#1C1C20;box-shadow:inset 0 0 0 1.5px #2A2A30}
+.screen{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:7px;background:#1A1210}
+.wallimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.glare{position:absolute;inset:0;z-index:60;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.03) 30%,rgba(255,255,255,0) 42%)}
+.deck{position:relative;width:114%;margin-left:-7%;height:clamp(10px,1.6vw,20px);border-radius:0 0 50% 50% / 0 0 100% 100%;background:linear-gradient(#ECEEF1,#C9CDD2 45%,#9599A0)}
+.deck::before{content:"";position:absolute;left:43%;width:14%;top:0;height:46%;border-radius:0 0 10px 10px;background:linear-gradient(#A8ACB2,#C9CDD2)}
+.floor{width:90%;height:40px;margin:-10px auto 0;background:radial-gradient(closest-side,rgba(20,14,8,.35),rgba(20,14,8,0));filter:blur(6px)}
+
+/* desktop canvas (1440 x 900) */
+.dc{position:absolute;left:0;top:0;width:1440px;height:900px;transform-origin:0 0;font-family:'Segoe UI Variable','Segoe UI',Geist,system-ui,sans-serif;color:#1B1B1B}
+.wall{position:absolute;inset:0;background:radial-gradient(900px 620px at 72% 28%,#7EB3F7 0%,rgba(126,179,247,0) 62%),radial-gradient(760px 520px at 18% 86%,#F6AE8E 0%,rgba(246,174,142,0) 58%),radial-gradient(700px 520px at 96% 96%,#8A6BE6 0%,rgba(138,107,230,0) 60%),linear-gradient(160deg,#0B2240 0%,#14457A 48%,#0A1C36 100%)}
+.dicons{position:absolute;left:18px;top:18px;display:flex;flex-direction:column;gap:18px}
+.dicon{width:76px;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);text-align:center}
+.win{position:absolute;border-radius:9px;overflow:hidden;background:#FAFAFA;box-shadow:0 30px 60px -20px rgba(0,8,20,.55),0 0 0 1px rgba(0,0,0,.18)}
+.tbar{height:40px;display:flex;align-items:center;justify-content:space-between;padding-left:14px;background:#EFF2F6;font-size:12.5px;color:#222}
+.tbar .t{display:flex;align-items:center;gap:10px}
+.ctl{display:flex;height:40px}
+.ctl span{width:46px;display:grid;place-items:center}
+.w1{left:120px;top:84px;width:800px;height:560px}
+.ribbon{display:flex;gap:18px;padding:0 16px;height:34px;align-items:center;font-size:12px;color:#444;background:#F7F8FA;border-bottom:1px solid #E3E5E8}
+.ribbon b{font-weight:600;color:#1B1B1B;border-bottom:2px solid #2F6FEB;padding-bottom:6px;margin-top:8px}
+.tools{display:flex;gap:8px;padding:8px 16px;background:#F7F8FA;border-bottom:1px solid #E3E5E8}
+.tools span{width:26px;height:22px;border-radius:5px;background:#E6E8EC}
+.doc{position:absolute;left:0;right:0;top:114px;bottom:0;background:#E9EBEE;display:flex;justify-content:center;padding-top:22px}
+.sheet{width:560px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12);padding:46px 56px;font-family:Georgia,serif;font-size:11.5px;line-height:1.65;color:#2A2A2A}
+.sheet h4{font-family:'Segoe UI',Geist,sans-serif;font-size:21px;margin:0 0 4px;color:#111}
+.sheet h5{font-family:'Segoe UI',Geist,sans-serif;font-size:13px;margin:16px 0 4px;color:#111}
+.sheet p{margin:0 0 8px}
+.w2{left:420px;top:330px;width:600px;height:420px;z-index:3}
+.tabs{height:40px;display:flex;align-items:flex-end;gap:4px;padding:0 0 0 10px;background:#DEE6F0}
+.tab{height:32px;padding:0 14px;display:flex;align-items:center;gap:8px;border-radius:8px 8px 0 0;background:#FAFAFA;font-size:12px}
+.addr{margin:8px 12px;height:30px;border-radius:15px;background:#EEF1F5;display:flex;align-items:center;gap:8px;padding:0 12px;font-size:12px;color:#555}
+.page{padding:6px 18px;display:flex;gap:16px}
+.pimg{width:220px;height:230px;border-radius:12px;background:radial-gradient(circle at 40% 45%,#F7C873 0 22%,#E98B3C 23% 40%,#C2562A 41% 52%,#F2E6D4 53%)}
+.ptx h6{font-family:Georgia,serif;font-size:24px;margin:4px 0 8px;font-weight:600;color:#1C1C1C}
+.ptx p{margin:0 0 8px;font-size:12px;line-height:1.6;color:#4A4A4A}
+.chip2{display:inline-block;font-size:11px;padding:3px 9px;border-radius:999px;background:#F1E7DA;margin-right:6px;color:#6B4A2A}
+.task{position:absolute;left:0;right:0;bottom:0;height:52px;z-index:40;background:rgba(238,240,245,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center}
+.ti{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;position:relative}
+.ti.on::after{content:"";position:absolute;bottom:2px;left:50%;width:16px;height:3px;margin-left:-8px;border-radius:3px;background:#5B6B80}
+.tis{display:flex;gap:6px;align-items:center}
+.tray{position:absolute;right:14px;top:0;height:52px;display:flex;align-items:center;gap:14px;font-size:12px;line-height:1.3;text-align:right}
+
+/* notes */
+.note{position:absolute;padding:14px 18px 22px;border-radius:2px;z-index:20;box-shadow:0 1px 1px rgba(0,0,0,.08),0 22px 34px -14px rgba(0,0,0,.55),0 4px 10px -4px rgba(0,0,0,.3)}
+.note::after{content:"";position:absolute;right:0;bottom:0;width:30px;height:30px;background:linear-gradient(135deg,rgba(0,0,0,0) 50%,#FBF6E6 50%);box-shadow:-2px -2px 4px rgba(0,0,0,.07)}
+.pin{position:absolute;top:-17px;left:52%;width:18px;height:30px;z-index:3}
+.grain{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:multiply;opacity:.35;pointer-events:none}
+.ntop{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:8px;margin-bottom:8px;border-bottom:1.6px dashed rgba(60,50,20,.3)}
+.nh{font-family:Caveat,cursive;font-weight:700;font-size:40px;line-height:1;margin:0;color:#2A2620}
+.ntools{display:flex;gap:4px;align-items:center}
+.ntools i{width:28px;height:28px;border-radius:7px;display:grid;place-items:center}
+.ntools i.on{background:rgba(60,50,20,.1)}
+.r{display:flex;align-items:flex-start;gap:12px;font-family:'Patrick Hand',Caveat,cursive;font-size:25px;line-height:1.3;margin:8px 0;position:relative;color:#2A2620}
+.cb{flex:0 0 auto;width:20px;height:20px;margin-top:6px;border:1.8px solid #4A4436;border-radius:5px;position:relative}
+.cb svg{position:absolute;left:-4px;top:-10px;width:32px;height:32px;overflow:visible}
+.tx{position:relative;display:inline-block}
+.st{position:absolute;left:-4px;right:-4px;top:36%;height:10px;transform-origin:left center}
+.st svg{display:block;width:100%;height:100%}
+.hl{position:relative;display:inline-block;padding:0 3px}
+.hlb{position:absolute;inset:3px -1px 2px;background:#EDB52C;border-radius:2px;transform-origin:left center}
+.hl > span:last-child{position:relative}
+.wr{display:inline-block}
+.add{display:flex;align-items:center;gap:12px;font-family:'Patrick Hand',cursive;font-size:23px;color:#9A8E68;margin-top:10px;padding-bottom:4px;border-bottom:1.4px dashed rgba(60,50,20,.25);margin-right:26px}
+.na{left:920px;top:112px;width:370px;background:#F7E28C;rotate:-1.2deg}
+.nb{left:1000px;top:488px;width:330px;background:#DDD3F0;rotate:1.4deg}
+.nc{left:200px;top:540px;width:300px;background:#C7DCF3;rotate:-1deg}
+.charm{position:absolute;top:0;left:720px;width:64px;z-index:30;transform-origin:50% 0}
+.charm i{display:block;width:2px;height:80px;margin:0 auto -6px;background:#8C7660}
+.tabs2{position:absolute;right:0;top:282px;display:flex;flex-direction:column;gap:12px;z-index:15}
+.tb{width:52px;height:118px;border-radius:12px 0 0 12px;display:grid;place-items:center;box-shadow:-4px 6px 14px -6px rgba(0,0,0,.45)}
+.tb span{writing-mode:vertical-rl;font-family:Caveat,cursive;font-weight:700;font-size:28px;color:#2A2620}
+.plusb{position:absolute;right:34px;top:190px;width:60px;height:60px;border-radius:50%;background:#fff;display:grid;place-items:center;z-index:16;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.spk{position:absolute;width:20px;height:20px;transform:scale(0);z-index:3}
+.toast{position:absolute;left:50%;bottom:84px;z-index:45;display:flex;align-items:center;gap:8px;padding:14px 18px;border-radius:16px;background:rgba(20,20,22,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#F5F1EA;font-size:15px;font-weight:500;transform:translateX(-50%);opacity:0;white-space:nowrap}
+.k{display:inline-grid;place-items:center;min-width:44px;height:38px;padding:0 10px;border-radius:9px;background:#F5F1EA;color:#161412;box-shadow:0 3px 0 #9C948A;font-size:14px;font-weight:600}
+.badge{position:absolute;left:820px;top:262px;z-index:46;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#161412;color:#F5F1EA;font-size:14px;font-weight:500;opacity:0;white-space:nowrap;box-shadow:0 10px 20px -8px rgba(0,0,0,.5)}
+.cur{position:absolute;left:0;top:0;z-index:50;pointer-events:none;opacity:0}
+.cur .tg{position:absolute;left:20px;top:22px;white-space:nowrap;font-size:14px;font-weight:600;color:#fff;padding:5px 11px;border-radius:6px 999px 999px 999px;box-shadow:0 8px 16px -6px rgba(0,0,0,.4)}
+.cf{position:absolute;left:1120px;top:250px;width:11px;height:16px;border-radius:2px;opacity:0;z-index:48}
+.stamp{position:absolute;left:1040px;top:270px;z-index:47;font-family:Caveat,cursive;font-weight:700;font-size:56px;color:var(--tom);border:4px solid var(--tom);border-radius:14px;padding:0 18px;rotate:-12deg;transform:scale(0);background:rgba(255,252,246,.4)}
+
+/* captions */
+.caps{position:absolute;left:4vw;bottom:6vh;width:min(400px,88vw);z-index:5;padding:22px 24px 24px;border-radius:22px;background:rgba(18,18,20,.74);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border:1px solid rgba(255,255,255,.12);color:var(--paper);opacity:0}
+.dots{display:flex;gap:6px;margin-bottom:16px}
+.dots span{flex:1;height:3px;border-radius:3px;background:rgba(245,241,234,.2)}
+.cgrid{display:grid}
+.cap{grid-area:1/1;opacity:0}
+.cap .n{font-size:12px;letter-spacing:.08em;color:rgba(245,241,234,.6)}
+.cap h3{font-size:40px;line-height:1;margin:8px 0 10px}
+.cap h3 em{color:var(--yel)}
+.cap p{margin:0;font-size:15px;line-height:1.55;color:rgba(245,241,234,.78)}
+
+/* features */
+.feat{background:var(--night);color:var(--paper);padding:140px 0 120px}
+.eyb{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,234,.55)}
+.h2{font-size:clamp(46px,6vw,92px);line-height:.95;margin:16px 0 0;letter-spacing:-.02em}
+.h2 em{font-style:italic;color:var(--yel)}
+.flist{margin-top:72px;border-bottom:1px solid rgba(245,241,234,.14)}
+.fr{position:relative;display:grid;grid-template-columns:90px minmax(0,1fr) minmax(0,360px);gap:24px;align-items:center;padding:30px 0;border-top:1px solid rgba(245,241,234,.14);transition:padding .5s cubic-bezier(.2,.8,.2,1)}
+.fr .num{font-size:13px;color:rgba(245,241,234,.5)}
+.fr h3{font-size:clamp(30px,3.4vw,52px);line-height:1;margin:0;transition:transform .5s cubic-bezier(.2,.8,.2,1),color .3s}
+.fr p{margin:0;font-size:15.5px;line-height:1.55;color:rgba(245,241,234,.68)}
+.fr:hover h3{transform:translateX(18px);color:#fff}
+.fr .mn{position:absolute;right:390px;top:50%;width:330px;z-index:5;pointer-events:none;opacity:0;transform:translateY(-50%) rotate(-6deg) scale(.7);transition:opacity .35s,transform .55s cubic-bezier(.2,.8,.2,1)}
+.fr .mn.wd{width:380px}
+.fr:hover .mn{opacity:1;transform:translateY(-50%) rotate(-2deg) scale(1)}
+.pv{position:relative;border-radius:20px;background:#F8F5EF;padding:28px 26px;color:#2A2620;font-family:Geist,sans-serif;text-align:left;box-shadow:0 40px 70px -28px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.08)}
+.pn{position:relative;padding:14px 16px 16px;border-radius:2px;box-shadow:0 16px 24px -12px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.08)}
+.pn .pin{position:absolute;top:-15px;left:52%;width:15px;height:26px}
+.pnt{font-family:Caveat,cursive;font-weight:700;font-size:28px;line-height:1;margin:0 0 6px;padding-bottom:6px;border-bottom:1.4px dashed rgba(60,50,20,.3)}
+.pr{display:flex;align-items:flex-start;gap:9px;font-family:'Patrick Hand',Caveat,cursive;font-size:19px;line-height:1.3;margin:5px 0;color:#2A2620}
+.pcb{flex:0 0 auto;width:15px;height:15px;margin-top:4px;border:1.6px solid #4A4436;border-radius:4px;position:relative}
+.pcb svg{position:absolute;left:-3px;top:-9px;width:24px;height:24px;overflow:visible}
+.ptx{position:relative}
+.ptx.done{color:#8C7F5A}
+.ptx .ps{position:absolute;left:-2px;right:-2px;top:36%;width:calc(100% + 4px);height:8px}
+.phl{background:#EDB52C;border-radius:2px;padding:0 3px}
+.phl.pkh{background:#F4A8C0}
+.padd{font-family:'Patrick Hand',cursive;font-size:17px;color:#9A8E68;margin-top:8px;padding-bottom:2px;border-bottom:1.2px dashed rgba(60,50,20,.25)}
+.pwin{border-radius:10px;background:#fff;box-shadow:0 10px 24px -12px rgba(0,0,0,.3),0 0 0 1px rgba(0,0,0,.08);overflow:hidden;width:78%}
+.pwb{display:flex;align-items:center;gap:6px;height:28px;padding:0 10px;background:#EEF1F5;font-size:11px;color:#555}
+.pwb span{flex:1}
+.pwb i{width:8px;height:8px;border-radius:50%;background:#D6D9DE}
+.pwl{padding:14px;display:flex;flex-direction:column;gap:9px}
+.pwl b{height:8px;border-radius:4px;background:#E6E8EC;width:70%}
+.ptag{position:absolute;left:22px;bottom:14px;font-size:12px;font-weight:600;background:#161412;color:#F5F1EA;padding:6px 11px;border-radius:999px}
+.pconf i{position:absolute;width:8px;height:12px;border-radius:2px}
+.pstamp{position:absolute;right:18px;top:22px;font-family:Caveat,cursive;font-weight:700;font-size:30px;color:#D93D33;border:3px solid #D93D33;border-radius:10px;padding:0 10px;rotate:-10deg;background:rgba(255,252,246,.6)}
+.plab{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8A8278}
+.prow{display:flex;align-items:flex-end;gap:10px}
+.psw{width:34px;height:34px;border-radius:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.psw.on{box-shadow:0 0 0 2.5px #2A2620}
+.pws{display:flex;gap:14px;padding:18px}
+.pside{display:flex;flex-direction:column;gap:6px;width:92px;font-size:11.5px;color:#6B635A}
+.pside b{font-size:22px;color:#2A2620;margin-bottom:6px}
+.pside span{padding:5px 8px;border-radius:7px}
+.pside span.on{background:#fff;color:#2A2620;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.pgrid{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pgc{height:66px;border-radius:5px;padding:7px 8px;display:flex;flex-direction:column;justify-content:space-between}
+.pgc span{font-family:Caveat,cursive;font-weight:700;font-size:18px;line-height:1}
+.pgc em{font-style:normal;font-size:10px;color:rgba(42,38,32,.65)}
+.ph{margin:0;font-size:20px;font-weight:600}
+.psub{margin:4px 0 14px;font-size:12.5px;color:#7A7268}
+.parow{display:flex;align-items:center;gap:12px;padding:10px 12px;margin-top:8px;border-radius:12px;background:#FFFDF9;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.parow > div{flex:1;display:flex;flex-direction:column}
+.parow b{font-size:14px}
+.parow em{font-style:normal;font-size:11.5px;color:#7A7268}
+.pdot{width:26px;height:26px;border-radius:6px}
+.prest{font-size:12px;font-weight:600;background:#F2D27A;padding:7px 12px;border-radius:8px}
+.pdark{background:#1C1B22;color:#ECE6DA}
+.ptop{display:flex;align-items:center;gap:10px}
+.ptop b{flex:1;font-size:16px}
+.ptog{width:42px;height:24px;border-radius:999px;background:#F2C14E;position:relative}
+.ptog i{position:absolute;right:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#1C1B22}
+.pdata{display:flex;align-items:center;gap:14px;margin-top:12px;padding:14px;border-radius:14px;background:#FFFDF9;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.pdata > div:first-child{flex:1;display:flex;flex-direction:column;gap:3px}
+.pdata b{font-size:14px}
+.pdata em{font-style:normal;font-size:11.5px;color:#7A7268}
+.pbtns{display:flex;gap:6px}
+.pbtns span{font-size:12px;font-weight:500;padding:8px 11px;border-radius:9px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.pfile{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:'Geist Mono',monospace;font-size:12px;padding:8px 12px;border-radius:999px;background:#F2D27A}
+.fr .pv .pnt,.fr .pv .ph{color:#2A2620}
+.fr .pv .plab{color:#8A8278}
+.fr .pv .psub{color:#7A7268}
+
+/* privacy */
+.priv{padding:150px 0 140px;background:var(--paper)}
+.pbig{font-size:clamp(38px,5.4vw,84px);line-height:1.05;margin:26px 0 0;letter-spacing:-.02em;max-width:1100px}
+.pbig .pw{display:inline-block;margin-right:.22em}
+.pbig em{font-style:italic;color:var(--tom)}
+.pfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:80px;border-top:1px solid var(--hair)}
+.pf{padding:28px 28px 0 0}
+.pf h4{margin:14px 0 8px;font-size:18px;font-weight:600}
+.pf p{margin:0;color:var(--ink2);font-size:15px;line-height:1.55}
+
+/* download */
+.dl{position:relative;padding:40px 0 140px;background:var(--paper)}
+.dlc{position:relative;overflow:hidden;border-radius:40px;background:var(--ink);color:var(--paper);padding:120px 40px 110px;text-align:center}
+.dlc .h2 em{color:var(--yel)}
+.dlc .hcta{margin-top:40px}
+.fine{max-width:520px;margin:26px auto 0;font-size:13.5px;line-height:1.6;color:rgba(245,241,234,.62)}
+.fn{position:absolute;width:150px;height:150px;border-radius:2px 2px 2px 22px;display:grid;place-items:center;font-family:Caveat,cursive;font-weight:700;font-size:30px;color:#1E1A17;box-shadow:0 30px 40px -18px rgba(0,0,0,.7)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;padding:40px 0 140px}
+.faq details{border-top:1px solid var(--hair);padding:0}
+.faq details:last-child{border-bottom:1px solid var(--hair)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:76px;font-size:19px;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq .pl{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--hair);display:grid;place-items:center;transition:transform .4s cubic-bezier(.2,.8,.2,1),background .3s}
+.faq details[open] .pl{transform:rotate(45deg);background:var(--yel);border-color:var(--yel)}
+.faq .ans{margin:0 0 26px;color:var(--ink2);font-size:16px;line-height:1.65;max-width:600px}
+
+/* footer */
+.foot{background:var(--night);color:var(--paper);padding:80px 0 0;overflow:hidden}
+.frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:14px;color:rgba(245,241,234,.7)}
+.frow a{color:rgba(245,241,234,.85)}
+.wm{font-family:Caveat,cursive;font-weight:700;font-size:25vw;line-height:.72;text-align:center;margin:60px 0 0;color:var(--yel);letter-spacing:-.02em;white-space:nowrap}
+
+@media (max-width:900px){
+ .links a.l{display:none}
+ .fr{grid-template-columns:50px minmax(0,1fr)}
+ .fr p{grid-column:2}
+ .fr .mn{display:none}
+ .pfacts{grid-template-columns:minmax(0,1fr)}
+ .faq{grid-template-columns:minmax(0,1fr);gap:20px}
+}
+@media (max-width:620px){
+ .wrap,.nav .in{padding:0 18px}
+ .hsub{font-size:15.5px}
+ .cap h3{font-size:30px}
+ .caps{left:4vw;bottom:3vh;padding:16px 18px}
+ .feat,.priv{padding:100px 0 90px}
+ .dlc{padding:80px 20px 70px;border-radius:26px}
+ .fn{display:none}
+}
+
+.why{padding:30px 0 120px;background:var(--paper)}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px;margin-top:56px}
+.wgrid h3{font-size:22px;margin:0 0 10px;font-weight:600;letter-spacing:-.01em}
+.wgrid p{margin:0;color:var(--ink2);line-height:1.65;font-size:16px}
+@media (max-width:900px){.wgrid{grid-template-columns:minmax(0,1fr);gap:28px}}
+</style>
 </head>
 <body>
-<!-- A simple first page; the real landing page comes later -->
-<main class="page">
-  <header><img src="paperpop.png" alt=""><span class="brand">PaperPop</span></header>
+<div class="pp">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ppgrain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix values="0 0 0 0 .2  0 0 0 0 .15  0 0 0 0 .1  0 0 0 .32 0"></feColorMatrix></filter></svg>
 
-  <h1>Paper sticky notes for your desktop</h1>
-  <p>Jot down tasks, tick them off with a satisfying scratch, highlight words, doodle, pin notes on
-  top of everything, and crumple them into the basket when you're done. A little charm hangs from
-  the top of your screen and cheers you on.</p>
+<header class="nav">
+<div class="navbg"></div>
+<div class="in">
+<a class="logo" href="#top" aria-label="PaperPop home"><img src="assets/icon-192.png" width="34" height="34" alt="">PaperPop</a>
+<nav class="pillnav" aria-label="Main"><a href="#film">How it works</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></nav>
+<a class="btn b-ink dlpill" href="#download"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download</a>
+</div>
+</header>
 
-  <div class="short">Everything stays on your computer. No account, no internet, no tracking.</div>
+<section class="hero2" id="top">
+<div class="wrap htx2">
+<span class="kick hx"><b>NEW</b>Sticky notes for Windows 10 &amp; 11 · Free</span>
+<h1 class="h1 serif"><span class="ln"><span>Your to-do list, on <em>paper,<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path class="sq" d="M3 12 C 40 4, 70 18, 110 9 S 170 6, 197 11" fill="none" stroke="#E5532D" stroke-width="3.5" stroke-linecap="round"/></svg></em></span></span><span class="ln"><span>right on your desktop.</span></span></h1>
+<p class="hsub hx">PaperPop pins real-feeling sticky notes on your Windows desktop, floating above every app. Write it, tick it, celebrate it, and get back to work.</p>
+<div class="hpts hx">
+<div><b>Always on top</b><span>Floats above every app</span></div>
+<div><b>Feels like paper</b><span>Handwriting, ticks, confetti</span></div>
+<div><b>Private by design</b><span>Offline, no account</span></div>
+</div>
+<div class="hcta hx">
+<a class="btn b-ink" href="https://apps.microsoft.com/detail/9MVPWKV3PTC3" style="min-height:52px;padding:0 26px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Get it from Microsoft Store</a>
+<a class="btn b-line" href="#film" style="min-height:52px;padding:0 26px">See how it works</a>
+</div>
+</div>
+</section>
 
-  <h2>Get PaperPop</h2>
-  <p>Coming soon to the Microsoft Store for Windows 10 and 11.</p>
+<section class="film" id="film">
+<div class="rig" role="img" aria-label="PaperPop sticky notes floating on a Windows desktop, above open app windows">
+<div class="mon">
+<div class="screen">
+<div class="dc" aria-hidden="true">
 
-  <h2>Help</h2>
-  <p>Questions or problems? Email <a href="mailto:hellopaperpop.app@gmail.com">hellopaperpop.app@gmail.com</a>.</p>
+<img class="wallimg" src="assets/wallpaper.webp" alt="" width="1600" height="897" decoding="async">
+<svg class="wall" style="display:none" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6EADA"/><stop offset=".55" stop-color="#E4ECE4"/><stop offset="1" stop-color="#CFE0D6"/></linearGradient></defs><rect width="1440" height="900" fill="url(#sky)"/><circle cx="1060" cy="250" r="92" fill="#FFF7E6"/><circle cx="1060" cy="250" r="150" fill="#FFF7E6" opacity=".35"/><path d="M0 470 C 200 400, 380 440, 560 410 S 900 350, 1100 400 S 1340 420, 1440 390 V900 H0z" fill="#C4D9CE"/><path d="M0 560 C 240 500, 460 540, 700 505 S 1080 460, 1440 520 V900 H0z" fill="#A3C2B4"/><path d="M0 650 C 300 600, 560 650, 820 615 S 1200 590, 1440 630 V900 H0z" fill="#82AA99"/><path d="M0 740 C 280 705, 600 745, 900 715 S 1260 700, 1440 725 V900 H0z" fill="#628E7E"/><path d="M640 300c8-6 14-6 20 0 6-6 12-6 20 0M720 270c6-5 11-5 16 0 5-5 10-5 16 0" fill="none" stroke="#7C8C86" stroke-width="2.4" stroke-linecap="round"/></svg>
+<div class="dicons" aria-hidden="true">
+<div class="dicon"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 14H7z" fill="#D9E3EE" stroke="#fff" stroke-width="1"/><path d="M4 7h16M9 7V4h6v3" stroke="#fff" stroke-width="1.4" fill="none"/></svg>Recycle Bin</div>
+<div class="dicon"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#F6C451"/><path d="M2 9h20v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#FFD76E"/></svg>Projects</div>
+<div class="dicon"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z" fill="#fff"/><path d="M15 2v5h5" fill="#DCE3EA"/><path d="M9 12h7M9 15h7M9 18h4" stroke="#7A8A9C" stroke-width="1.2"/></svg>Resume.pdf</div>
+</div>
 
-  <footer class="muted">© 2026 Kamalnath K · <a href="privacy.html">Privacy Policy</a></footer>
-</main>
+<div class="win w1">
+<div class="tbar"><span class="t"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="#2F6FEB"/><path d="M7 8l2 8 3-6 3 6 2-8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Launch plan — Writer</span><span class="ctl"><span><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
+<div class="ribbon"><span>File</span><b>Home</b><span>Insert</span><span>Layout</span><span>Review</span><span>View</span></div>
+<div class="tools"><span></span><span></span><span style="width:60px"></span><span></span><span></span><span></span><span style="width:90px"></span><span></span></div>
+<div class="doc"><div class="sheet">
+<h4>Launch plan</h4>
+<p style="color:#777;font-family:'Segoe UI',Geist,sans-serif;font-size:11px">Draft · Updated today</p>
+<h5>Goal</h5>
+<p>Ship version one to the store, collect the first hundred reviews and learn what people love before adding anything new.</p>
+<h5>This week</h5>
+<p>Finish the store listing, record a short demo, write the announcement post and send the beta link to friends for honest feedback.</p>
+<h5>Next week</h5>
+<p>Fix the small things people report, reply to every review, and plan the next update around the most requested idea.</p>
+</div></div>
+</div>
+
+<div class="win w2">
+<div class="tabs"><span class="tab"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#E98B3C"/></svg>Paneer butter masala</span><span class="tab" style="background:transparent;color:#555">New tab</span></div>
+<div class="addr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>recipes.example/paneer-butter-masala</div>
+<div class="page"><div class="pimg"></div><div class="ptx"><span class="chip2">30 min</span><span class="chip2">Serves 4</span><h6>Paneer butter masala</h6><p>Soft paneer in a rich tomato and butter gravy. Simple, comforting and ready before the rice is.</p><p>Start by roasting the spices gently, then blend the tomatoes until silky smooth.</p></div></div>
+</div>
+
+<div class="charm"><i></i><svg width="64" height="84" viewBox="0 0 64 84" aria-hidden="true"><circle cx="32" cy="5" r="5" fill="#8C7660"/><rect x="6" y="10" width="52" height="70" rx="22" fill="#F7F0E2" stroke="#4A4436" stroke-width="3"/><path d="M41 11l12-3-4 10z" fill="#F2C94C" stroke="#4A4436" stroke-width="2" stroke-linejoin="round"/><path d="M18 44q4 3.5 8 0M38 44q4 3.5 8 0" stroke="#3A3428" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 55h8" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="15" cy="53" rx="5" ry="3" fill="#F4B6C2"/><ellipse cx="49" cy="53" rx="5" ry="3" fill="#F4B6C2"/></svg></div>
+
+<div class="plusb" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A2620" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+<div class="tabs2" aria-hidden="true"><div class="tb" style="background:#DDD3F0"><span>Later</span></div><div class="tb" style="background:#F3DD8D"><span>Work</span></div><div class="tb" style="background:#DCC7A9"><span>Reading</span></div><div class="tb" style="background:#C7DCF3"><span>Trips</span></div></div>
+<div class="note na"><svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#ppgrain)"></rect></svg><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><div class="ntop"><p class="nh"><span class="wr w0">Today</span></p><span class="ntools"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="#4A4436"/></svg></i><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l-1 6 3 3H7l3-3z"/><path d="M12 13v7"/></svg></i><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="9" cy="10" r="1.2"/><circle cx="14" cy="9" r="1.2"/><circle cx="15.5" cy="13.5" r="1.2"/></svg></i><i class="on"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A2620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg></i></span></div><div class="r"><span class="cb"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="t1" d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="0"/></svg></span><span class="tx"><span class="wr w1t">Reply to Meera</span><span class="st s1"><svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.6" stroke-linecap="round"/></svg></span></span></div><div class="r"><span class="cb cb2"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="t2" d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="0"/></svg></span><span class="tx"><span class="wr w2t">Pay electricity bill</span><span class="st s2"><svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.6" stroke-linecap="round"/></svg></span></span></div><div class="r"><span class="cb cb3"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="t3" d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="0"/></svg></span><span class="tx"><span class="wr w3t">Water the plants</span><span class="st s3"><svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.6" stroke-linecap="round"/></svg></span></span></div><div class="add"><span>+</span><span>Write a task…</span></div><svg class="spk" style="left:26px;top:118px;width:20px;height:20px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z" fill="#E5532D"/></svg><svg class="spk" style="left:4px;top:150px;width:13px;height:13px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z" fill="#2A2620"/></svg><svg class="spk" style="left:60px;top:156px;width:15px;height:15px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z" fill="#FFFFFF"/></svg></div>
+<div class="note nb"><svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#ppgrain)"></rect></svg><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><div class="ntop"><p class="nh">Ideas</p></div><div class="r" style="display:block">Post the <span class="hl bw"><span class="hlb"></span><span>launch</span></span> on LinkedIn</div><div class="r" style="display:block">Record a tiny demo</div><svg width="150" height="30" viewBox="0 0 150 36" aria-hidden="true" style="margin-top:2px"><path class="dood" d="M4 24c12-20 20 8 32-6s18 12 30-2 20 10 32-4 16 6 46-6" fill="none" stroke="#2A2620" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="230" stroke-dashoffset="0"/></svg><div class="add"><span>+</span><span>Write a task…</span></div></div>
+<div class="note nc"><svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#ppgrain)"></rect></svg><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><div class="ntop"><p class="nh">Groceries</p></div><div class="r"><span class="cb"></span><span class="tx">Oat milk</span></div><div class="r"><span class="cb"></span><span class="tx">Bananas</span></div><div class="add"><span>+</span><span>Write a task…</span></div></div>
+<span class="cf" style="background:#FFD95A;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#FFC2CF;"></span><span class="cf" style="background:#BDEBCB;"></span><span class="cf" style="background:#C4DDFB;"></span><span class="cf" style="background:#E5532D;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#FFFCF6;"></span><span class="cf" style="background:#8A6BE6;"></span><span class="cf" style="background:#FFD95A;"></span><span class="cf" style="background:#FFC2CF;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#BDEBCB;"></span><span class="cf" style="background:#C4DDFB;"></span><span class="cf" style="background:#E5532D;"></span><span class="cf" style="background:#FFFCF6;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#8A6BE6;"></span><span class="cf" style="background:#FFD95A;"></span><span class="cf" style="background:#FFC2CF;"></span><span class="cf" style="background:#BDEBCB;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#C4DDFB;"></span><span class="cf" style="background:#E5532D;"></span><span class="cf" style="background:#FFFCF6;"></span><span class="cf" style="background:#8A6BE6;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#FFD95A;"></span><span class="cf" style="background:#FFC2CF;"></span><span class="cf" style="background:#BDEBCB;"></span><span class="cf" style="background:#C4DDFB;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#E5532D;"></span><span class="cf" style="background:#FFFCF6;"></span><span class="cf" style="background:#8A6BE6;"></span><span class="cf" style="background:#FFD95A;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#FFC2CF;"></span><span class="cf" style="background:#BDEBCB;"></span><span class="cf" style="background:#C4DDFB;"></span><span class="cf" style="background:#E5532D;border-radius:50%;width:11px;height:11px;"></span><span class="cf" style="background:#FFFCF6;"></span><span class="cf" style="background:#8A6BE6;"></span><span class="cf" style="background:#FFD95A;"></span>
+<div class="stamp">All done!</div>
+
+<div class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Notes stay on top</div>
+<div class="toast tN"><span class="k">Ctrl</span><span class="k">Shift</span><span class="k">N</span><span style="margin-left:8px">New note</span></div>
+<div class="toast tH"><span class="k">Ctrl</span><span class="k">Shift</span><span class="k">H</span><span style="margin-left:8px">Hide all</span></div>
+<div class="toast tS"><span class="k">Ctrl</span><span class="k">Shift</span><span class="k">H</span><span style="margin-left:8px">Bring them back</span></div>
+
+<div class="task">
+<div class="tis">
+<span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#2F6FEB" stroke-width="2.4"/><circle cx="12" cy="12" r="3.5" fill="#2F6FEB"/></svg></span>
+<span class="ti"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>
+<span class="ti on"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#F6C451"/><path d="M2 9h20v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#FFD76E"/></svg></span>
+<span class="ti on"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#3D7BF0"/><path d="M2 12h20M12 2c3.5 3.5 3.5 16.5 0 20M12 2c-3.5 3.5-3.5 16.5 0 20" fill="none" stroke="#fff" stroke-width="1.4"/></svg></span>
+<span class="ti on"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="#2F6FEB"/><path d="M7 8l2 8 3-6 3 6 2-8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+<span class="ti on ppi"><svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 6h28a2 2 0 0 1 2 2v20l-9 9H7a2 2 0 0 1-2-2V6z" fill="#FFD95A" stroke="#161412" stroke-width="2"/><circle cx="14" cy="19" r="1.8" fill="#161412"/><circle cx="25" cy="19" r="1.8" fill="#161412"/><path d="M16 24c2 2 5 2 7 0" fill="none" stroke="#161412" stroke-width="2" stroke-linecap="round"/></svg></span>
+</div>
+<div class="tray"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg><span>9:41 AM<br>Fri, 13 Nov</span></div>
+</div>
+
+<div class="cur c1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2l7 19 2.6-7.8L20 10.6z" fill="#E5532D" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="tg" style="background:#E5532D">Nila</span></div>
+<div class="cur c2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2l7 19 2.6-7.8L20 10.6z" fill="#3D6BE0" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="tg" style="background:#3D6BE0">Arun</span></div>
+<div class="cur c3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2l7 19 2.6-7.8L20 10.6z" fill="#17845A" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="tg" style="background:#17845A">Kamal</span></div>
+</div>
+<div class="glare"></div>
+</div>
+</div>
+<div class="neck"></div>
+<div class="mfoot"></div>
+<img class="grass" src="assets/grass.svg" alt="">
+</div>
+<div class="caps" aria-live="polite">
+<div class="dots"><span class="d0"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></div>
+<div class="cgrid">
+<div class="cap k0"><span class="n mono">01 — WRITE</span><h3 class="serif">Jot it <em>down.</em></h3><p>A fresh note lands on your desktop, written in a friendly hand that feels like yours.</p></div>
+<div class="cap k1"><span class="n mono">02 — TICK</span><h3 class="serif">Tick it <em>off.</em></h3><p>A pen scratch and a little sparkle for every task you finish. Highlight what matters.</p></div>
+<div class="cap k2"><span class="n mono">03 — ALWAYS ON TOP</span><h3 class="serif">Above <em>everything.</em></h3><p>Switch apps, drag windows around. Your notes keep floating where you can see them.</p></div>
+<div class="cap k3"><span class="n mono">04 — SHORTCUTS</span><h3 class="serif">One key <em>away.</em></h3><p>Ctrl+Shift+N for a new note from any app. Ctrl+Shift+H for a clean desk, and back.</p></div>
+<div class="cap k4"><span class="n mono">05 — CELEBRATE</span><h3 class="serif">Finish with <em>confetti.</em></h3><p>Clear a whole note and the confetti flies. Then crumple it into the basket.</p></div>
+</div>
+</div>
+</section>
+
+<section class="feat" id="features">
+<div class="wrap">
+<span class="eyb mono rv">Features</span>
+<h2 class="h2 serif rv">The little things<br><em>are the whole thing.</em></h2>
+<div class="flist">
+<div class="fr rv"><span class="num mono">01</span><h3 class="serif">Handwriting that feels yours</h3><p>Every list reads like it came from your favourite pen.</p><div class="mn" aria-hidden="true"><div class="pv"><div class="pn" style="background:#F7E28C;rotate:-2deg"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Today</p><div class="pr"><span class="pcb"></span><span class="ptx">Finish the slides</span></div><div class="pr"><span class="pcb"></span><span class="ptx">Call the bank</span></div><div class="pr"><span class="pcb"></span><span class="ptx">Buy oat milk</span></div><div class="padd">+ Write a task…</div></div></div></div></div>
+<div class="fr rv"><span class="num mono">02</span><h3 class="serif">Pen ticks and sparkles</h3><p>A satisfying scratch for every task you finish.</p><div class="mn" aria-hidden="true"><div class="pv"><div class="pn" style="background:#DDD3F0;rotate:1.5deg"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Later</p><div class="pr"><span class="pcb"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ptx done">Call home<svg class="ps" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/></svg></span></div><div class="pr"><span class="pcb"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ptx done">Renew library card<svg class="ps" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/></svg></span></div><div class="pr"><span class="pcb"></span><span class="ptx">Book the dentist</span></div><div class="padd">+ Write a task…</div></div></div></div></div>
+<div class="fr rv"><span class="num mono">03</span><h3 class="serif">Always on top</h3><p>Notes float above every app, so nothing slips your mind.</p><div class="mn" aria-hidden="true"><div class="pv" style="padding:22px 22px 30px"><div class="pwin"><div class="pwb"><span>Browser</span><i></i><i></i><i></i></div><div class="pwl"><b></b><b style="width:80%"></b><b style="width:90%"></b><b style="width:60%"></b><b style="width:85%"></b></div></div><div class="pn" style="background:#F7E28C;position:absolute;right:16px;top:58px;width:180px;rotate:-3deg"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Today</p><div class="pr"><span class="pcb"></span><span class="ptx">Reply to Meera</span></div><div class="pr"><span class="pcb"></span><span class="ptx">Pay the bill</span></div></div><span class="ptag">↑ Always on top</span></div></div></div>
+<div class="fr rv"><span class="num mono">04</span><h3 class="serif">Confetti finish</h3><p>Clear a whole note and celebrate it properly.</p><div class="mn" aria-hidden="true"><div class="pv"><div class="pconf"><i style="left:8%;top:10%;background:#E5532D;rotate:20deg"></i><i style="left:88%;top:14%;background:#5B8DEF;rotate:-30deg"></i><i style="left:80%;top:70%;background:#F2C14E;rotate:45deg"></i><i style="left:12%;top:78%;background:#7BC98A;rotate:-15deg"></i><i style="left:50%;top:4%;background:#F08AA0;rotate:60deg"></i><i style="left:94%;top:44%;background:#8A6BE6;rotate:10deg"></i><i style="left:4%;top:44%;background:#F2C14E;rotate:-40deg"></i><i style="left:64%;top:90%;background:#E5532D;rotate:30deg"></i></div><div class="pn" style="background:#DDD3F0;rotate:-1.5deg"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Later</p><div class="pr"><span class="pcb"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ptx done">Call home<svg class="ps" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/></svg></span></div><div class="pr"><span class="pcb"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ptx done">Renew library card<svg class="ps" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/></svg></span></div><div class="pr"><span class="pcb"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16l7 8 17-20" fill="none" stroke="#2A2620" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ptx done">Book the dentist<svg class="ps" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 12 2, 20 9, 30 5 S 50 2, 60 6 S 80 9, 90 4 S 110 3, 118 6" fill="none" stroke="#3A3428" stroke-width="2.4" stroke-linecap="round"/></svg></span></div></div><span class="pstamp">All done!</span></div></div></div>
+<div class="fr rv"><span class="num mono">05</span><h3 class="serif">Highlight and doodle</h3><p>Mark the words that matter, or sketch right on the paper.</p><div class="mn" aria-hidden="true"><div class="pv"><div class="pn" style="background:#C7DCF3;rotate:1deg"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Ideas</p><div class="pr">Post the&nbsp;<span class="phl">launch</span>&nbsp;on LinkedIn</div><div class="pr">Record a&nbsp;<span class="phl pkh">tiny demo</span></div><svg width="150" height="34" viewBox="0 0 150 36" aria-hidden="true"><path d="M4 24c12-20 20 8 32-6s18 12 30-2 20 10 32-4 16 6 46-6" fill="none" stroke="#2A2620" stroke-width="2.4" stroke-linecap="round"/></svg></div></div></div></div>
+<div class="fr rv"><span class="num mono">06</span><h3 class="serif">Any ink, any paper</h3><p>Pick any ink and paper color you like.</p><div class="mn" aria-hidden="true"><div class="pv"><p class="plab">Ink</p><div class="prow"><svg width="20" height="64" viewBox="0 0 20 64" aria-hidden="true"><path d="M4 18h12v42H4z" fill="#2A2620"/><path d="M4 18l6-14 6 14z" fill="#E9D6B8"/><path d="M8.5 7.5l1.5-3.5 1.5 3.5z" fill="#2A2620"/></svg><svg width="20" height="64" viewBox="0 0 20 64" aria-hidden="true"><path d="M4 18h12v42H4z" fill="#3D6BE0"/><path d="M4 18l6-14 6 14z" fill="#E9D6B8"/><path d="M8.5 7.5l1.5-3.5 1.5 3.5z" fill="#3D6BE0"/></svg><svg width="20" height="64" viewBox="0 0 20 64" aria-hidden="true"><path d="M4 18h12v42H4z" fill="#D93D33"/><path d="M4 18l6-14 6 14z" fill="#E9D6B8"/><path d="M8.5 7.5l1.5-3.5 1.5 3.5z" fill="#D93D33"/></svg><svg width="20" height="64" viewBox="0 0 20 64" aria-hidden="true"><path d="M4 18h12v42H4z" fill="#2E8B57"/><path d="M4 18l6-14 6 14z" fill="#E9D6B8"/><path d="M8.5 7.5l1.5-3.5 1.5 3.5z" fill="#2E8B57"/></svg><svg width="20" height="64" viewBox="0 0 20 64" aria-hidden="true"><path d="M4 18h12v42H4z" fill="#7A4FD6"/><path d="M4 18l6-14 6 14z" fill="#E9D6B8"/><path d="M8.5 7.5l1.5-3.5 1.5 3.5z" fill="#7A4FD6"/></svg><svg width="22" height="64" viewBox="0 0 22 64" aria-hidden="true"><rect x="3" y="24" width="16" height="36" rx="3" fill="#F2EEE6" stroke="#D8D2C6"/><path d="M5 24l3-14h6l3 14z" fill="#F2C14E"/></svg><svg width="22" height="64" viewBox="0 0 22 64" aria-hidden="true"><rect x="3" y="24" width="16" height="36" rx="3" fill="#F2EEE6" stroke="#D8D2C6"/><path d="M5 24l3-14h6l3 14z" fill="#F4A8C0"/></svg><svg width="22" height="64" viewBox="0 0 22 64" aria-hidden="true"><rect x="3" y="24" width="16" height="36" rx="3" fill="#F2EEE6" stroke="#D8D2C6"/><path d="M5 24l3-14h6l3 14z" fill="#9ED9B4"/></svg></div><p class="plab" style="margin-top:14px">Paper</p><div class="prow" style="gap:8px"><span class="psw on" style="background:#F7E28C"></span><span class="psw" style="background:#F6C9D3"></span><span class="psw" style="background:#C7DCF3"></span><span class="psw" style="background:#C9E6CF"></span><span class="psw" style="background:#DDD3F0"></span><span class="psw" style="background:#DCC7A9"></span></div></div></div></div>
+<div class="fr rv"><span class="num mono">07</span><h3 class="serif">Stationery case and Workspace</h3><p>Tuck notes away, or see every note in one calm place.</p><div class="mn wd" aria-hidden="true"><div class="pv pws"><div class="pside"><b class="hand">PaperPop</b><span class="on">All notes</span><span>Archive</span><span>Trash</span><span>Settings</span></div><div class="pgrid"><div class="pgc" style="background:#F7E28C"><span>Today</span><em>3 left</em></div><div class="pgc" style="background:#C7DCF3"><span>Ideas</span><em>2 left</em></div><div class="pgc" style="background:#DDD3F0"><span>Later</span><em>All done</em></div><div class="pgc" style="background:#C9E6CF"><span>Shop</span><em>1 left</em></div><div class="pgc" style="background:#F7E28C"><span>Work</span><em>4 left</em></div><div class="pgc" style="background:#DCC7A9"><span>Trips</span><em>2 left</em></div></div></div></div></div>
+<div class="fr rv"><span class="num mono">08</span><h3 class="serif">Archive and 30-day trash</h3><p>Nothing is lost by mistake. Deleted notes wait 30 days.</p><div class="mn wd" aria-hidden="true"><div class="pv"><p class="ph">Archive</p><p class="psub">Notes you finished and swept away.</p><div class="parow"><span class="pdot" style="background:#F7E28C"></span><div><b>Groceries</b><em>3 tasks done · Wednesday</em></div><span class="prest">Restore</span></div><div class="parow"><span class="pdot" style="background:#C7DCF3"></span><div><b>Ideas</b><em>4 tasks done · Wednesday</em></div><span class="prest">Restore</span></div></div></div></div>
+<div class="fr rv"><span class="num mono">09</span><h3 class="serif">Night desk</h3><p>A softer, darker desk for late-night lists.</p><div class="mn" aria-hidden="true"><div class="pv pdark"><div class="ptop"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2C14E" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><b>Night desk</b><span class="ptog on"><i></i></span></div><div class="pn" style="background:#CDBF7E;rotate:-2deg;filter:brightness(.82);margin-top:14px"><svg class="pin" viewBox="0 0 18 30" aria-hidden="true"><line x1="9" y1="14" x2="9" y2="29" stroke="#8A8A8A" stroke-width="1.6"/><circle cx="9" cy="9" r="8" fill="#D93D33"/><circle cx="6.5" cy="6.5" r="2.6" fill="#F28A80"/></svg><p class="pnt">Tonight</p><div class="pr"><span class="pcb"></span><span class="ptx">Read 20 pages</span></div><div class="pr"><span class="pcb"></span><span class="ptx">Plan tomorrow</span></div></div></div></div></div>
+<div class="fr rv"><span class="num mono">10</span><h3 class="serif">Backups you own</h3><p>Automatic local backups, plus export and import any time.</p><div class="mn wd" aria-hidden="true"><div class="pv"><p class="ph">Your data</p><div class="pdata"><div><b>Saved on this computer</b><em>Last backup today, 9:41 AM</em></div><div class="pbtns"><span>Export</span><span>Import…</span></div></div><div class="pfile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A2620" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>my-notes.paperpop</div></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="priv" id="privacy">
+<div class="wrap">
+<span class="eyb mono" style="color:var(--ink2)">Privacy</span>
+<p class="pbig serif"><span class="pw">Your</span><span class="pw">notes</span><span class="pw">never</span><span class="pw">leave</span><span class="pw">your</span><span class="pw">computer.</span><span class="pw">No</span><span class="pw">account.</span><span class="pw">No</span><span class="pw">cloud.</span><span class="pw">No</span><span class="pw">tracking.</span><span class="pw">Just</span><span class="pw"><em>paper,</em></span><span class="pw"><em>pixels</em></span><span class="pw">and</span><span class="pw"><em>you.</em></span></p>
+<div class="pfacts">
+<div class="pf rv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#161412" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg><h4>No sign-in, ever</h4><p>Open it and start writing. No email, no password.</p></div>
+<div class="pf rv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#161412" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><path d="M3 3l18 18"/></svg><h4>Fully offline</h4><p>Your notes live in a local file on your PC.</p></div>
+<div class="pf rv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#161412" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg><h4>Zero tracking</h4><p>No ads, no analytics, no telemetry.</p></div>
+</div>
+</div>
+</section>
+
+<section class="dl" id="download">
+<div class="wrap">
+<div class="dlc">
+<div class="fn f1" style="left:6%;top:16%;background:#FFD95A;rotate:-10deg">yay!</div>
+<div class="fn f2" style="right:7%;top:12%;background:#FFC2CF;rotate:8deg;width:130px;height:130px">done ✓</div>
+<div class="fn f3" style="left:12%;bottom:-30px;background:#BDEBCB;rotate:6deg;width:120px;height:120px">today</div>
+<div class="fn f4" style="right:10%;bottom:-20px;background:#C4DDFB;rotate:-7deg;width:140px;height:140px">ideas</div>
+<span class="eyb mono rv">Free for Windows 10 and 11</span>
+<h2 class="h2 serif rv" style="margin-top:20px">Make your desk<br>a little <em>happier.</em></h2>
+<div class="hcta rv">
+<a class="btn b-cream" href="https://apps.microsoft.com/detail/9MVPWKV3PTC3" style="min-height:54px;padding:0 28px;font-size:16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Get it from Microsoft Store</a>
+<a class="btn b-ghostd" href="https://github.com/Kamalnath9127/paperpop-site/releases/latest" style="min-height:54px;padding:0 26px;font-size:16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download .exe</a>
+</div>
+<p class="fine rv">The Store version is recommended: no warnings and automatic updates. With the .exe, Windows may show “Windows protected your PC” because PaperPop is a new indie app. Click More info, then Run anyway.</p>
+</div>
+</div>
+</section>
+
+<section class="why" id="why">
+<div class="wrap">
+<span class="eyb mono" style="color:var(--ink2)">Why PaperPop</span>
+<h2 class="h2 serif rv">Sticky notes for Windows,<br><em style="font-style:italic;color:var(--tom)">made to feel like paper.</em></h2>
+<div class="wgrid">
+<article class="rv"><h3>Desktop sticky notes that stay on top</h3><p>Most note apps hide behind your windows. PaperPop notes float above every app on your Windows 10 or 11 desktop, so your to-do list stays in sight while you work.</p></article>
+<article class="rv"><h3>Cute, aesthetic and genuinely useful</h3><p>A handwriting font, pastel paper colors, pen ticks with a sparkle and confetti when a list is done. A checklist that makes finishing things feel good.</p></article>
+<article class="rv"><h3>Private by design</h3><p>No sign-in, no cloud, no tracking. Notes are saved on your PC with automatic local backups, and you can export them any time.</p></article>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap faq">
+<div><span class="eyb mono" style="color:var(--ink2)">FAQ</span><h2 class="h2 serif" style="font-size:clamp(42px,4.6vw,68px)">Questions,<br><em style="font-style:italic;color:var(--tom)">answered.</em></h2></div>
+<div>
+<details><summary>Is PaperPop free?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">Yes. PaperPop is free to download and use.</p></details>
+<details><summary>Does it need the internet?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">No. PaperPop works fully offline.</p></details>
+<details><summary>Where are my notes saved?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">Only on your computer, in a local database with automatic backups. Export a .paperpop file any time and import it on another PC.</p></details>
+<details><summary>Microsoft Store or .exe?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">The Store version is recommended: it installs without warnings and updates itself. The .exe is a direct install for people who prefer it. Install one, not both.</p></details>
+<details><summary>Can it start with Windows?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">Yes. Turn on Start with Windows in Settings and your notes are waiting every time you log in.</p></details>
+<details><summary>How is PaperPop different from Windows Sticky Notes?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">PaperPop is built to keep your checklist in sight: notes stay on top of other apps, use a handwriting font, and celebrate finished tasks with pen ticks and confetti. It works fully offline without any account.</p></details>
+<details><summary>Does PaperPop work on Windows 10?<span class="pl" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="ans">Yes. PaperPop runs on both Windows 10 and Windows 11.</p></details>
+</div>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap frow">
+<span>© 2026 Kamalnath K · Made with care in Chennai</span>
+<span><a href="mailto:hellopaperpop.app@gmail.com">hellopaperpop.app@gmail.com</a> · <a href="privacy.html">Privacy Policy</a></span>
+</div>
+<p class="wm" aria-hidden="true">PaperPop</p>
+</footer>
+</div>
+<script src="assets/gsap.min.js" defer></script>
+<script src="assets/ScrollTrigger.min.js" defer></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
