@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PaperPop Privacy Policy</title>
-<meta name="description" content="PaperPop collects nothing. Your notes stay on your computer.">
+<meta name="description" content="PaperPop collects nothing. Your notes and your voice stay on your computer.">
 <link rel="icon" href="paperpop.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,11 +13,12 @@
   <header><a href="./"><img src="paperpop.png" alt=""></a><a class="brand" href="./">PaperPop</a></header>
 
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: 13 November 2026</p>
+  <p class="muted">Last updated: 18 November 2026</p>
 
   <div class="short">
     <strong>The short version:</strong> PaperPop collects nothing and sends nothing.
-    Your notes stay on your computer, and only you can see them.
+    Your notes stay on your computer, and only you can see them. Voice notes turn your speech into
+    text on your computer; your voice is never recorded to a file and never sent anywhere.
   </div>
 
   <h2>What PaperPop keeps</h2>
@@ -30,10 +31,42 @@
   <p>Nothing. PaperPop:</p>
   <ul>
     <li>has no account and no sign-in,</li>
-    <li>never connects to the internet (its fonts and sounds are built in),</li>
+    <li>works offline (its fonts and sounds are built in); the only time it uses the internet is
+    the one optional voice pack download described below, and only when you ask for it,</li>
     <li>has no analytics, tracking, advertising or crash reporting of its own,</li>
     <li>does not sell or share any information, because it has none to share.</li>
   </ul>
+
+  <h2>Voice notes and the microphone</h2>
+  <p>Voice notes (an Experimental feature, off until you turn it on) let you say tasks instead of
+  typing them.</p>
+  <ul>
+    <li><strong>The microphone is used only while you dictate:</strong> from the moment you click a
+    note's microphone button (or press Ctrl+Shift+Alt+M) until it stops. While it listens, a red dot shows in
+    the note and the charm wears its listening face. It stops by itself after 10 seconds of silence,
+    after 1 minute, and when you lock or put your computer to sleep.</li>
+    <li><strong>Your voice stays on your computer.</strong> The sound is kept only in memory, turned
+    into text on your computer by a built-in speech model (OpenAI's Whisper, running offline), and
+    then thrown away. It is never saved to a file and never sent anywhere. Only the text becomes a
+    task in your note.</li>
+    <li>To recognise names you use, PaperPop looks at the words in your notes and in your
+    <em>Words I use</em> list in Settings. This also happens only on your computer.</li>
+    <li><strong>The voice pack:</strong> the speech model (about 60 MB) is not part of the app.
+    PaperPop downloads it once, only after you turn voice notes on, from Hugging Face (where the
+    speech model is published) or, if that does not work, from PaperPop's own page on GitHub.
+    Nothing about you or your notes is sent with that download; like any download, Hugging Face
+    and GitHub can see your IP address
+    (<a href="https://huggingface.co/privacy">Hugging Face Privacy Policy</a>,
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>).
+    You can delete the voice pack any time in Settings.</li>
+    <li>Windows decides whether apps may use the microphone; you can turn it off for PaperPop in
+    Windows Settings → Privacy &amp; security → Microphone.</li>
+  </ul>
+
+  <h2>Send feedback</h2>
+  <p>The <em>Send feedback</em> button in Settings opens your own email app with a new message to
+  PaperPop. The only thing PaperPop adds is its version number; no recordings and no notes. You
+  read the message and decide whether to send it.</p>
 
   <h2>Export and import</h2>
   <p>When you choose <em>Export</em>, PaperPop writes your notes to a file in the place you pick.
